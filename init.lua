@@ -159,6 +159,20 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+-- Remap ijkl for movement in normal mode
+vim.keymap.set('n', 'i', 'k', { noremap = true, silent = true }) -- Move up
+vim.keymap.set('n', 'k', 'j', { noremap = true, silent = true }) -- Move down
+vim.keymap.set('n', 'j', 'h', { noremap = true, silent = true }) -- Move left
+vim.keymap.set('n', 'l', 'l', { noremap = true, silent = true }) -- Move right
+
+-- Map 'h' to switch to insert mode in normal mode
+vim.keymap.set('n', 'h', 'i', { noremap = true, silent = true })
+
+-- Also remap ijkl for visual mode navigation
+vim.keymap.set('v', 'i', 'k', { noremap = true, silent = true })
+vim.keymap.set('v', 'k', 'j', { noremap = true, silent = true })
+vim.keymap.set('v', 'j', 'h', { noremap = true, silent = true })
+vim.keymap.set('v', 'l', 'l', { noremap = true, silent = true })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
