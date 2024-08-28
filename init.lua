@@ -179,6 +179,8 @@ vim.keymap.set('v', 'k', 'j', { noremap = true, silent = true })
 vim.keymap.set('v', 'j', 'h', { noremap = true, silent = true })
 vim.keymap.set('v', 'l', 'l', { noremap = true, silent = true })
 
+-- map CTRL+S for save
+vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save the current buffer' })
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
